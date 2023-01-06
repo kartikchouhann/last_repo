@@ -17,5 +17,5 @@ jobs:
         python-version: 3.7
     
     - run: terraform init
-    - run: terraform apply -auto-approve
+    - run: terraform apply -auto-approve -var "client_id=${{ secrets.GCP_CLIENT_ID }}" -var "client_secret=${{ secrets.GCP_CLIENT_SECRET }}"
 
